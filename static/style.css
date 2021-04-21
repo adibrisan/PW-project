@@ -1,0 +1,141 @@
+body {
+  background-image: url("f1_c.png");
+  background-repeat: no-repeat;
+  height: 120vh;
+  width: 120vh;
+  background-size: auto 100%;
+  background-position: center center;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.f1 {
+  border-radius: 100%;
+  height: 13%;
+  width: 13%;
+}
+
+.loginbox {
+  width: 20%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  top: 32%;
+  left: 87%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 35%;
+}
+
+.name {
+  left: 10%;
+  width: 63%;
+  top: 43%;
+  position: absolute;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+input[type="password"] {
+  color: white;
+}
+
+.pass {
+  left: 10%;
+  width: 63%;
+  top: 60%;
+  position: absolute;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login {
+  top: 82%;
+  left: 40%;
+  position: absolute;
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  font-family: sans-serif;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+
+.titleforbox {
+  top: 2.8%;
+  left: 5%;
+  position: absolute;
+}
+
+.username {
+  left: 10%;
+  width: 63%;
+  top: 30%;
+  position: absolute;
+}
+
+input[type="text"] {
+  color: white;
+}
+
+.password {
+  left: 10%;
+  width: 63%;
+  top: 47%;
+  position: absolute;
+}
+
+#titleforbox {
+  left: 23%;
+  top: 6%;
+  position: absolute;
+}
+
+.footer {
+  bottom: 3%;
+  left: 2.5%;
+  position: absolute;
+  font-weight: bold;
+}
+.lalert{
+    color: white;
+    position: absolute;
+    top: 73%;
+    right: 27%;
+}
+.visbtn a {
+  color: white;
+  position: absolute;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  left: 77%;
+  width: 63%;
+  top: 49%;
+}

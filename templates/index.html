@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Fan Site</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+  <link rel="icon" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png')}}">
+</head>
+
+<body>
+  <header>
+    <img class="f1" src="{{ url_for('static', filename='f1_logo.png')}}" alt="f1logo">
+  </header>
+  <div class="loginbox">
+    <img class="avatar" src="static/omulet.png" alt="loginAvatar">
+    <div id="titleforbox">
+      <h1>Login Here</h1>
+    </div>
+    <form class="" action="/general" method="POST">
+      <div class="username">
+        <p>Username</p>
+      </div>
+      <input class="name" type="text" name="username" placeholder="Enter Username">
+      <br>
+      <div class="password">
+        <p>Password</p>
+      </div>
+      <br>
+      <br>
+      <input class="pass" type="password" name="password" placeholder="Enter Password">
+      <input class="login" type="submit" name="" value="Login">
+      <div class="lalert">
+        {% with messages = get_flashed_messages() %}
+              {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-success alert-dismissable" role="alert">
+              {{message}}
+              </div>
+              {% endfor %}
+              {% endif %}
+              {% endwith %}
+      </div>
+    </form>
+  </div>
+
+  <div class="visbtn">
+    <a href="/visitor">Visitor</a>
+  </div>
+
+  <div class="footer">
+    <p>F1 Fan Site Copyright &copy;</p>
+  </div>
+</body>
+
+</html>

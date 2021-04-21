@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>F1 description details</title>
+  <link rel="icon" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #ea5455;
+    }
+
+    .imag {
+      top: 3%;
+      left: 55%;
+      position: absolute;
+      border-radius: 10%;
+    }
+
+    .text {
+      position: absolute;
+      top: 10%;
+      left: 3%;
+      font-family: comic sans ms;
+    }
+
+    .car .imag {
+      position: absolute;
+      top: 1%;
+      left: 2%;
+      width: 5%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="car">
+    <a href="/collection"><img class="imag" src="/static/racing-car.png"></a>
+  </div>
+
+  <div>
+    <img class="imag" src="/static/{{mydata.cale}}">
+  </div>
+  <div class="text">
+    <br><br><br>
+    <h1>Name: {{mydata.name}}</h1>
+    <br>
+    <br><br>
+    <h1>Owned by: {{mydata.owned}}.</h1>
+    <br>
+    <br><br>
+    <h1>Drivers: {{mydata.drivers}}</h1>
+    <br> <br> <br>
+    <h1>Year: {{mydata.year}}</h1>
+    <br> <br>
+    <h1>Description: {{mydata.description | safe}}</h1>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

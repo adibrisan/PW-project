@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fan Site</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleGeneral.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png')}}">
+  </head>
+  <body>
+
+    <nav>
+      <div class="logo">
+        <img src="{{ url_for('static', filename='f1.png')}}" alt="Formula 1">
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/visitor">My favorite Compilation</a>
+        </li>
+        <li>
+          <a href="/abvisitor">About me</a>
+        </li>
+        <li>
+          <a href="/galleryvisitor">F1 Collection</a>
+        </li>
+        <li>
+          <a href="/logout">Login Page</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="cf">
+      <img class="bottom" src="{{url_for('static',filename='ham1.jpg')}}" />
+      <img class="top" src="{{url_for('static',filename='sch.jpg')}}" />
+    </div>
+    <div class="container">
+      <div class="title">
+        <h1>My favorite compilation</h1>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="feature-img">
+            <img src="{{url_for('static',filename='schu.jpg')}}" width="100%" >
+            <img src="{{url_for('static',filename='play-button.png')}}" class="play-btn" onclick="playVideo('static/videoplayback.mp4')">
+          </div>
+        </div>
+        <div class="col">
+          <div class="small-img-row">
+            <div class="small-img">
+              <img src="{{url_for('static',filename='hamilton.jpg')}}" alt="">
+              <img src="{{url_for('static',filename='play-button.png')}}" class="play-btn" onclick="playVideo('static/hamilton.mp4')">
+            </div>
+            <p>Lewis Hamilton's Pole Lap | 2020 Tuscan Grand Prix | Pirelli</p>
+          </div>
+          <div class="small-img-row">
+            <div class="small-img">
+              <img src="{{url_for('static',filename='max.jpg')}}" alt="">
+              <img src="{{url_for('static',filename='play-button.png')}}" class="play-btn" onclick="playVideo('static/max.mp4')">
+            </div>
+            <p>Verstappen's Maiden Win | Spanish Grand Prix 2016</p>
+          </div>
+          <div class="small-img-row">
+            <div class="small-img">
+              <img src="{{url_for('static',filename='vet.jpg')}}" alt="">
+              <img src="{{url_for('static',filename='play-button.png')}}" class="play-btn" onclick="playVideo('static/vettel.mp4')">
+            </div>
+            <p>BRASIL2006 - MICHAEL SCHUMACHER OVERTAKES ONBOARD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+      <video width="100%" controls autoplay id="myVideo">
+        <source src="{{url_for('static',filename='videoplayback.mp4')}}" type="video/mp4">
+      </video>
+      <img class="close-btn" src="{{url_for('static',filename='close-btn.png')}}" alt="" onclick="stopVideo()">
+    </div>
+    <div class="bodytext">
+      <h1>Lewis Hamilton Ties Michael Schumacher’s Wins Record in Germany</h1>
+      <br> <br> <br> <br>
+      <p>Hamilton won his 91st Formula 1 race at the Eifel Grand Prix, with Schumacher’s record for titles in sight.</p> <br>
+      <p>NÜRBURG, Germany — Even Lewis Hamilton once saw Michael Schumacher’s record of 91 wins in Formula 1 as unbeatable. Now he’s matched it.</p> <br>
+      <p>Schumacher’s son, Mick, presented Hamilton with one of his father’s old helmets after the British driver took a record-tying 91st win at Germany’s Eifel Grand Prix.</p> <br>
+      <p>“Seeing his dominance, I don’t think anyone, and especially me, didn’t imagine that I’d be anywhere near Michael in terms of records so it’s an incredible honor and it’s going to take some time to get used to,” Hamilton said, adding that he used to choose Schumacher as his character when playing a video game.</p>
+      <br>
+      <p>“That number’s so big and when it’s so far away it’s hard for people to perhaps fully understand how hard it was for him to go those 91 wins, to deliver weekend in and weekend out, year on year on year and stay so physically in shape and so precise. So I understand that now more than ever,” Hamilton said.</p> <br>
+      <p>Hamilton took a big step closer to matching Schumacher’s record of seven titles, too, after his teammate Valtteri Bottas failed to finish with an engine problem. Hamilton now leads the Formula 1 championship by 69 points with six races to go.
+      </p> <br> <br>
+      <img src="{{url_for('static',filename='hamwin.jpg')}}" alt="">
+      <br><br>
+    </div>
+    <script type="text/javascript">
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo(){
+    videoPlayer.style.display = "none";
+    }
+
+    function playVideo(file){
+    myVideo.src = file;
+    videoPlayer.style.display = "block";
+    }
+    </script>
+  </body>
+</html>
